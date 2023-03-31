@@ -58,7 +58,7 @@ def get_correct_answer(answers: List[str]) -> int:
     :return: Index of the correct answer if found, -1 otherwise
     """
     for index, answer in enumerate(answers):
-        if answer.count("**") == 2:
+        if answer.count("**") > 0:
             return index
 
     return -1
@@ -73,7 +73,6 @@ def response_to_questions(response: str) -> List[Question]:
     questions = []
     count = 1
 
-    print(response)
     for question_text in response.split("\n\n"):
 
         question_text = question_text.strip()
