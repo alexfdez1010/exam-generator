@@ -1,5 +1,4 @@
 openai
-pyyaml
 mdpdf
 streamlit
 watchdog

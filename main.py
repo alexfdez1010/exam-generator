@@ -1,23 +1,10 @@
-import os
-import subprocess
-
 import openai
 import streamlit as st
 
 from app.app import get_app
-from utils.api import complete_text
 
 OPENAI_TOKEN = "OPENAI_TOKEN"
-OPENAI_ORG = "OPENAI_ORG"  # Model to use
-
-def create_exam(prompt: str):
-    """
-    Create exam using GPT-3.5 Turbo
-    :param prompt: Prompt to complete
-    """
-    markdown = complete_text(prompt)
-
-
+OPENAI_ORG = "OPENAI_ORG"
 
 
 def initial_config():
@@ -30,8 +17,6 @@ def initial_config():
     st.set_page_config(
         page_title="Exam generator",
         page_icon=":pencil2:",
-        layout="wide",
-        initial_sidebar_state="expanded"
     )
 
 

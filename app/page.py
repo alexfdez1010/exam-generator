@@ -28,11 +28,27 @@ class Page:
 
 class GenerateExamPage(Page):
 
+    description = """
+    This app generates exams with questions and answers, powered by GPT-3.5 (a.k.a. ChatGPT), 
+    and can generate questions and answers on any topic. You can download the questions as a 
+    PDF file or take the exam within the app. However, the quality of the generated questions 
+    and answers may vary depending on the topic. If you are unsure about the accuracy of any of 
+    the questions, you can request clarifications from the AI in the results page. In most cases, 
+    the AI will be able to rectify any mistakes. However, if you are still unsure, it is recommended 
+    that you search for the topic on the internet or ask an expert.
+
+    The app is intended for learning purposes only, to help students practice and test their knowledge 
+    with immediate feedback. It is not intended to generate exams for real-world applications. Please 
+    note that the app is not responsible for any damage caused by its use.
+    """
+
     def render(self, app):
         """
         Render the page
         """
         st.title("Generate exam")
+
+        st.markdown(self.description)
 
         topics = st.text_input(
             "Topics",
