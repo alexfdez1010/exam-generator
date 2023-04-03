@@ -31,8 +31,9 @@ def prepare_prompt(topics: str, number_of_questions: int, number_of_answers: int
     return (
         f"Create an exam of multiple choice questions with {number_of_questions} "
         f"questions and {number_of_answers} of possible answers in each question. "
-        f"Put the correct answer in bold (**) in its original spot. The exam should "
-        f"be about {topics}. Only generate the questions and answers, not the exam itself."
+        f"Put the correct answer in bold (surrounded by **) in its original spot. "
+        f"The exam should be about {topics}. Only generate the questions and "
+        f"answers, not the exam itself."
     )
 
 
