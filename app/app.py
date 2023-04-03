@@ -3,7 +3,7 @@ import streamlit as st
 from app.page import GenerateExamPage, PageEnum, QuestionsPage, ResultsPage
 
 
-@st.cache_resource
+@st.cache_resource(ttl=60 * 60 * 24)
 def get_app():
     """
     Create a new app instance if it doesn't exist yet
