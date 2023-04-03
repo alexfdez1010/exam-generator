@@ -185,8 +185,24 @@ class ResultsPage:
         for index, question in enumerate(app.questions):
             self.__render_question(question, app.get_answer(index))
 
-        if st.button("Generate new exam"):
-            app.change_page(PageEnum.GENERATE_EXAM)
+        left, right = st.columns(2)
+
+        with left:
+
+            if st.button("Generate new exam"):
+                app.reset()
+                app.change_page(PageEnum.GENERATE_EXAM)
+
+        with right:
+
+            questions_to_pdf(app.questions, "questions.pdf")
+            st.download_button(
+                "Download",
+                data=open("questions.pdf", "rb").read(),
+                file_name="questions.pdf",
+                mime="application/pdf",
+                help="Download the questions as a PDF file"
+            )
 
     def __render_question(self, question: Question, user_answer: int):
         """
