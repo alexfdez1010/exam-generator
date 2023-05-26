@@ -86,7 +86,7 @@ OPENAI_ORG = <your-org>
 After installing dependencies and setting secrets, execute the Exam Generator app by running:
 
 ```
-streamlit run app.py
+streamlit run main.py
 ```
 
 The Exam Generator app should now be accessible in your web browser at `http://localhost:8501`.
