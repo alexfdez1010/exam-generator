@@ -5,7 +5,7 @@ import re
 
 from model.question import Question
 
-MODEL = "gpt-3.5-turbo"
+MODEL = "gpt-4o-mini"
 
 
 def complete_text(prompt: str) -> str:
