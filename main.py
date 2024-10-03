@@ -4,14 +4,12 @@ import streamlit as st
 from app.app import get_app
 
 OPENAI_TOKEN = "OPENAI_TOKEN"
-OPENAI_ORG = "OPENAI_ORG"
 
 
 def initial_config():
     """
     Initial configuration of OpenAI API and streamlit
     """
-    openai.organization = st.secrets[OPENAI_ORG]
     openai.api_key = st.secrets[OPENAI_TOKEN]
 
     st.set_page_config(
