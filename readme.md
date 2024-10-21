@@ -2,6 +2,8 @@
 
 Welcome to the Exam Generator, a powerful tool that leverages the GPT-3.5 language model to create quizzes on any topic of your choice. This application is built using Python and Streamlit, making it easy to create, customize, and share quizzes with others.
 
+If you're looking to explore a platform that offers this and much more, with a generous free trial, be sure to check out [EduGlowUp](https://eduglowup.com).
+
 ## Table of Contents
 
 - [Requirements](#requirements)
